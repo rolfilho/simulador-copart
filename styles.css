@@ -1,0 +1,90 @@
+/* styles.css */
+body {
+    background: white;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: #1a35fe;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.logo {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+h1, h2, h3 {
+    color: #1a35fe;
+}
+
+section {
+    margin: 20px;
+}
+
+button {
+    background-color: #1a35fe;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #0a1c7c;
+}
+
+div {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #1a35fe;
+    color: white;
+}
+
+tfoot {
+    background-color: #1a35fe;
+    color: white;
+}
+
+tfoot td {
+    padding-top: 10px;
+    border: none; /* Remove borders from the footer */
+}
+
+tfoot td:first-child {
+    font-weight: bold;
+}
+
+span {
+    font-weight: bold;
+    color: #1a35fe;
+}

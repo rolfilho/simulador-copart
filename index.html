@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Estimativa de Coparticipação - Petlove</title>
+</head>
+<body>
+    <header>
+        <img src="your_logo.png" alt="Your Logo" class="logo">
+        <h1>Estimativa de Coparticipação - Petlove</h1>
+    </header>
+
+    <section id="inputs">
+        <h2>Escolha seus parâmetros abaixo</h2>
+
+        <div>
+            <label for="familyMembers">Número de dependentes:</label>
+            <input type="number" id="familyMembers" min="0" value="0" onchange="calculateEstimates()">
+        </div>
+
+        <div>
+            <label for="additionalFee">Atualmente paga R$ 200/mês/dependente:</label>
+            <select id="additionalFee" onchange="calculateEstimates()">
+                <option value="true" selected>Sim</option>
+                <option value="false">Não</option>
+            </select>
+        </div>
+    </section>
+
+    <section id="outputs">
+        <h2>Estimativas de </h2>
+
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Categoria</th>
+                        <th>Exemplos</th>
+                        <th>Qtde. Anual Procedimentos</th>
+                        <th>Custo Médio</th>
+                        <th>Coparticipação Anual</th>
+                    </tr>
+                </thead>
+                <tbody id="outputTableYear">
+                    <!-- Output table dynamically populated using JavaScript -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Total Anual de Copart</td>
+                        <td id="totalCopaymentYear">R$ 0,00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">Custo com dependentes</td>
+                        <td id="totalCurrentCost">R$ 0,00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">Economia:</td>
+                        <td id="savingsYear">R$ 0,00</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
