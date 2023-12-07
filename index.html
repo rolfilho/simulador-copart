@@ -18,7 +18,16 @@
 
         <div>
             <label for="familyMembers">Número de dependentes:</label>
-            <input type="number" id="familyMembers" min="0" value="0" onchange="calculateEstimates()">
+            <!-- Change the input to a dropdown -->
+            <select id="familyMembers" onchange="calculateEstimates()">
+                <option value="0" selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
         </div>
 
         <div>
@@ -32,7 +41,7 @@
 
     <section id="outputs">
         <h2>Tabela de custos de Coparticipação </h2>
-        <span> A tabela abaixo contém valores anuais <b>médios</b> para sua família. O custo real varia muito com o uso e a escolha de prestadores de saúde</span>
+        <span> A tabela abaixo contém valores anuais <b>médios</b> para sau família. O custo real varia muito com o uso e a escolha de prestadores de saúde</span>
 
         <div>
             <table>
