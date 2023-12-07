@@ -47,7 +47,7 @@ label {
 }
 
 select {
-    width: 100%;
+    width: 50%;
     padding: 8px;
     margin-top: 3px;
     margin-bottom: 10px;
@@ -56,6 +56,7 @@ select {
 
 table {
     width: 100%;
+    overflow-x: auto;
     border-collapse: collapse;
     margin-top: 10px;
 }
@@ -63,6 +64,16 @@ table {
 th, td {
     padding: 8px;
     text-align: left;
+}
+
+/* Allow content to wrap within the table */
+th, td {
+    white-space: normal;
+}
+
+input {
+    width: 30%;
+    box-sizing: border-box;
 }
 
 th {
@@ -84,7 +95,3 @@ tfoot td:first-child {
     font-weight: bold;
 }
 
-span {
-    font-weight: bold;
-    color: #1a35fe;
-}
