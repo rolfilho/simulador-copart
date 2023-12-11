@@ -6,19 +6,30 @@ body {
 }
 
 header {
-    background-color: #1a35fe;
+    background-color: #000000; /* Adjusted background color */
     color: white;
     text-align: center;
     padding: 10px;
 }
 
-.logo {
-    max-width: 100px;
-    max-height: 100px;
+.logo-container {
+    display: flex;
+    align-items: center;
 }
 
-h1, h2, h3 {
-    color: #1a35fe;
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+h1 {
+    color: #ffffff; /* Adjusted text color */
+}
+
+h2, h3 {
+    color: #000000; /* Adjusted text color */
 }
 
 section {
@@ -26,7 +37,7 @@ section {
 }
 
 button {
-    background-color: #1a35fe;
+    background-color: #000000;
     color: white;
     padding: 10px;
     cursor: pointer;
@@ -77,12 +88,12 @@ input {
 }
 
 th {
-    background-color: #1a35fe;
+    background-color: #000000;
     color: white;
 }
 
 tfoot {
-    background-color: #1a35fe;
+    background-color: #000000;
     color: white;
 }
 
@@ -95,3 +106,7 @@ tfoot td:first-child {
     font-weight: bold;
 }
 
+span {
+    font-weight: bold;
+    color: #000000;
+}
