@@ -56,7 +56,7 @@ function calculateEstimates() {
     // Update the total copayment row
     document.getElementById("totalCopaymentYear").textContent = `R$ ${totalCopaymentYear.toFixed(2)}`;
 
-    const totalCurrentCost = additionalFee ? totalPeopleForCalculations * 200 * 12 : 0;
+    const totalCurrentCost = additionalFee ? (totalPeopleForCalculations-1) * 200 * 12 : 0;
     const savingsYear = Math.max(0, totalCurrentCost - totalCopaymentYear);
 
     document.getElementById("totalCurrentCost").textContent = `R$ ${totalCurrentCost.toFixed(2)}`;
