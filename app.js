@@ -36,6 +36,8 @@ function calculateEstimates() {
     const familyMembers = parseInt(document.getElementById("familyMembers").value);
     const additionalFee = document.getElementById("additionalFee").value === "true";
 
+    const totalPeopleForCalculations = familyMembers + 1; // Main policyholder plus additional family members
+
     const outputTableYear = document.getElementById("outputTableYear");
     let totalCopaymentYear = 0;
 
@@ -45,7 +47,7 @@ function calculateEstimates() {
             cost: parseInt(outputTableYear.rows[i].cells[3].querySelector('input').value)
         };
 
-        const copayment = procedure.frequency * procedure.cost * 0.2;
+        const copayment = procedure.frequency * procedure.cost * 0.2 * totalPeopleForCalculations;
         totalCopaymentYear += copayment;
 
         outputTableYear.rows[i].cells[4].textContent = `R$ ${copayment.toFixed(2)}`;
@@ -54,12 +56,14 @@ function calculateEstimates() {
     // Update the total copayment row
     document.getElementById("totalCopaymentYear").textContent = `R$ ${totalCopaymentYear.toFixed(2)}`;
 
-    const totalCurrentCost = additionalFee ? familyMembers * 200 * 12 : 0;
+    const totalCurrentCost = additionalFee ? totalPeopleForCalculations * 200 * 12 : 0;
     const savingsYear = Math.max(0, totalCurrentCost - totalCopaymentYear);
 
     document.getElementById("totalCurrentCost").textContent = `R$ ${totalCurrentCost.toFixed(2)}`;
     document.getElementById("savingsYear").textContent = `R$ ${savingsYear.toFixed(2)}`;
 }
+
+
 
 function getExamples(category) {
     switch (category) {
